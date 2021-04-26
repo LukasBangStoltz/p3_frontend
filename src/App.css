@@ -33,3 +33,8 @@ ul.header li a:hover:not(.active) {
   padding: 1px 16px;
   height: 1000px;
 }
+
+table, th, td {
+  border: 1px solid black;
+}
+

@@ -13,7 +13,7 @@ import AllFriends from "./AllFriends"
 import FindFriend from "./FindFriend"
 import Home from "./Home"
 
-const URI = "http://localhost:8080/graphql"
+const URI = "http://localhost:5555/graphql"
 
 const client = new ApolloClient({
   uri: URI,
@@ -40,7 +40,7 @@ export default function App() {
         </ul>
 
         <hr />
-        {/* Provider */}
+        <ApolloProvider client= {client}>
         <div className="content">
           <Switch>
             <Route exact path="/">
@@ -58,7 +58,7 @@ export default function App() {
 
           </Switch>
         </div>
-
+    </ApolloProvider>
       </div>
     </Router>
   );
